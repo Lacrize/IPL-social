@@ -22,3 +22,7 @@ test("mail with sapce", () => {
   expect(isValidEmail("test@email.com")).toBe(true);
 });
 
+test("mail without point in domain", () => {
+    expect(isValidEmail("test@emailcom")).toBe(false);
+    expect(isValidEmail("test@email.com")).toBe(true);    
+});
