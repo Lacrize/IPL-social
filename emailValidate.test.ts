@@ -12,4 +12,13 @@ test("mail without @", () => {
 test("mail without text before of after @", () => {
     expect(isValidEmail("@example.com")).toBe(false);
     expect(isValidEmail("test@")).toBe(false);
+      expect(isValidEmail("test@email.com")).toBe(true);
+
 });
+
+test("mail with sapce", () => {
+  expect(isValidEmail("test @email.com")).toBe(false);
+  expect(isValidEmail("test@ email.com")).toBe(false);
+  expect(isValidEmail("test@email.com")).toBe(true);
+});
+
