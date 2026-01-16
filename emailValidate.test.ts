@@ -6,7 +6,7 @@ test("Valid simple mail", () => {
 
 test("mail without @", () => {
   expect(isValidEmail("testexample.com")).toBe(false);
-  expect(isValidEmail("teste@xamplecom")).toBe(true);
+  expect(isValidEmail("teste@example.com")).toBe(true);
 });
 
 test("mail without text before of after @", () => {
